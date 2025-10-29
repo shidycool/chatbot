@@ -1,80 +1,224 @@
-{"intents": [
-        {"tag": "greeting",
-         "patterns": ["Hi there", "How are you", "Is anyone there?","Hey","Hola", "Hello", "Good day"],
-         "responses": ["Hello, thanks for asking", "Good to see you again", "Hi there, how can I help?"],
-         "context": [""]
-        },
-        {"tag": "goodbye",
-         "patterns": ["Bye", "See you later", "Goodbye", "Nice chatting to you, bye", "Till next time"],
-         "responses": ["See you!", "Have a nice day", "Bye! Come back again soon."],
-         "context": [""]
-        },
-        {"tag": "thanks",
-         "patterns": ["Thanks", "Thank you", "That's helpful", "Awesome, thanks", "Thanks for helping me"],
-         "responses": ["Happy to help!", "Any time!", "My pleasure"],
-         "context": [""]
-        },
-        {"tag": "noanswer",
-         "patterns": [],
-         "responses": ["Sorry, can't understand you", "Please give me more info", "Not sure I understand"],
-         "context": [""]
-        },
-        {"tag": "options",
-         "patterns": ["How you could help me?", "What you can do?", "What help you provide?", "How you can be helpful?", "What support is offered"],
-         "responses": ["I can guide you through Adverse drug reaction list, Blood pressure tracking, Hospitals and Pharmacies", "Offering support for Adverse drug reaction, Blood pressure, Hospitals and Pharmacies"],
-         "context": [""]
-        },
-        {"tag": "adverse_drug",
-         "patterns": ["How to check Adverse drug reaction?", "Open adverse drugs module", "Give me a list of drugs causing adverse behavior", "List all drugs suitable for patient with adverse reaction", "Which drugs dont have adverse reaction?" ],
-         "responses": ["Navigating to Adverse drug reaction module"],
-         "context": [""]
-        },
-        {"tag": "blood_pressure",
-         "patterns": ["Open blood pressure module", "Task related to blood pressure", "Blood pressure data entry", "I want to log blood pressure results", "Blood pressure data management" ],
-         "responses": ["Navigating to Blood Pressure module"],
-         "context": [""]
-        },
-        {"tag": "blood_pressure_search",
-         "patterns": ["I want to search for blood pressure result history", "Blood pressure for patient", "Load patient blood pressure result", "Show blood pressure results for patient", "Find blood pressure results by ID" ],
-         "responses": ["Please provide Patient ID", "Patient ID?"],
-         "context": ["search_blood_pressure_by_patient_id"]
-        },
-        {"tag": "search_blood_pressure_by_patient_id",
-         "patterns": [],
-         "responses": ["Loading Blood pressure result for Patient"],
-         "context": [""]
-        },
-        {"tag": "pharmacy_search",
-         "patterns": ["Find me a pharmacy", "Find pharmacy", "List of pharmacies nearby", "Locate pharmacy", "Search pharmacy" ],
-         "responses": ["Please provide pharmacy name"],
-         "context": ["search_pharmacy_by_name"]
-        },
-        {"tag": "search_pharmacy_by_name",
-         "patterns": [],
-         "responses": ["Loading pharmacy details"],
-         "context": [""]
-        },
-        {"tag": "hospital_search",
-         "patterns": ["Lookup for hospital", "Searching for hospital to transfer patient", "I want to search hospital data", "Hospital lookup for patient", "Looking up hospital details" ],
-         "responses": ["Please provide hospital name or location","Mama Ngina Hospital","Nairobi Hospital"],
-         "context": ["search_hospital_by_params"]
-        },
-        {"tag": "search_hospital_by_params",
-         "patterns": [],
-         "responses": ["Please provide hospital type"],
-         "context": ["search_hospital_by_type"]
-        },
-        {"tag": "search_hospital_by_type",
-         "patterns": [],
-         "responses": ["Loading hospital details"],
-         "context": [""]
-        },
-
-        {"tag": "search_about_kmpdc",
-         "patterns": ["where is kmpdc?"],
-         "responses": ["KMPDC is located along Woodlands Rd, Off Lenana Rd",
-         "Regulates the lincesing and registration of medical practitioners and dentists"],
-         "context": [""]
-        }
-   ]
+{
+  "intents": [
+    {
+      "tag": "office_location",
+      "patterns": [
+        "Where are your offices?",
+        "Where is KMPDC located?",
+        "What is your office address?",
+        "Where can I find KMPDC?"
+      ],
+      "responses": [
+        "KMPDC offices are located along Woodlands Road, off Lenana Road, Nairobi, Kenya.",
+        "You can visit us at KMPDC headquarters, Woodlands Road, off Lenana Road, Nairobi."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "registration_application_email",
+      "patterns": [
+        "Can I send my registration application via email?",
+        "Can I apply for registration online?",
+        "Is registration submission done by email?",
+        "Can I submit my registration documents through email?"
+      ],
+      "responses": [
+        "Registration applications should be submitted through the KMPDC Online Services Portal. Email submissions are not accepted.",
+        "Please use the KMPDC online portal for all registration applications."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "certificate_collection",
+      "patterns": [
+        "Can someone pick a registration certificate on my behalf?",
+        "Can another person collect my certificate?",
+        "Is it possible for someone else to pick my registration certificate?"
+      ],
+      "responses": [
+        "Yes, a representative can collect your certificate on your behalf if they present a signed authorization letter and valid identification."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "registration_duration",
+      "patterns": [
+        "How long is the registration process?",
+        "How long does registration take?",
+        "When will my registration be completed?"
+      ],
+      "responses": [
+        "The registration process typically takes 2–4 weeks after submission of all required documents and successful verification."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "licensing_duration",
+      "patterns": [
+        "How long does licensing processing take after registration?",
+        "When can I get my license after registration?",
+        "How long does it take to process a license?"
+      ],
+      "responses": [
+        "Licensing usually takes 2–3 weeks after registration approval and payment confirmation."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "foreign_doctor_practice",
+      "patterns": [
+        "Can a foreign doctor practice in Kenya for a short time?",
+        "Can foreign doctors work in Kenya temporarily?",
+        "Are short-term foreign practitioners allowed?"
+      ],
+      "responses": [
+        "Yes, foreign doctors may apply for a temporary license to practice in Kenya for a specific duration or assignment, subject to KMPDC approval."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "case_status",
+      "patterns": [
+        "What is the status of my cases?",
+        "Can you update me on my case?",
+        "How can I check the progress of my complaint or case?"
+      ],
+      "responses": [
+        "You can check the status of your case through the KMPDC online portal or by contacting the Legal Department for updates."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "online_account_help",
+      "patterns": [
+        "Assist me to access my online account?",
+        "I can’t log in to my KMPDC account",
+        "Help me with my KMPDC account login"
+      ],
+      "responses": [
+        "Please use the ‘Forgot Password’ option on the KMPDC Online Services Portal. If the issue persists, contact ICT support via support@kmpdc.go.ke."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "email_update",
+      "patterns": [
+        "I need to change my online email?",
+        "How can I update my KMPDC portal email?",
+        "Can I change my registered email address?"
+      ],
+      "responses": [
+        "To change your registered email, send a formal request to ICT support at support@kmpdc.go.ke, including your full name and registration details."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "cpd_points_issue",
+      "patterns": [
+        "My CPD points are not reflecting?",
+        "Why are my CPD points missing?",
+        "CPD points not updated on my profile?"
+      ],
+      "responses": [
+        "CPD points may take a few days to update after provider submission. If not reflected, please confirm with your CPD provider or email cpd@kmpdc.go.ke."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "insufficient_cpd_points",
+      "patterns": [
+        "I do not have enough points to renew my license?",
+        "Can I renew my license without full CPD points?",
+        "What happens if I lack required CPD points?"
+      ],
+      "responses": [
+        "You must attain the required CPD points before renewal. Please complete additional accredited CPD activities to meet the renewal criteria."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "invoice_penalty_removal",
+      "patterns": [
+        "I have a penalty on my invoice, can this be removed?",
+        "Can my penalty charge be waived?",
+        "Is it possible to remove my late payment penalty?"
+      ],
+      "responses": [
+        "Penalty removal is subject to KMPDC management approval. Please submit a written request explaining the reason for delay."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "license_type_change",
+      "patterns": [
+        "How can I change my license from non-clinical to clinical?",
+        "Can I switch from non-clinical to clinical practice?",
+        "Change my license category to clinical"
+      ],
+      "responses": [
+        "You can request a license type change by submitting supporting documentation through the KMPDC portal and notifying the Licensing Department."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "license_credentials_update",
+      "patterns": [
+        "How can I update the credentials on my licence?",
+        "I need to add qualifications to my license",
+        "Update my professional details on license"
+      ],
+      "responses": [
+        "To update credentials, submit your new academic or professional documents through the KMPDC portal for verification and license update."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "foreign_internship_kenya",
+      "patterns": [
+        "Can I do my internship in Kenya as a foreigner?",
+        "Are foreigners allowed to do internship in Kenya?",
+        "Foreign trained doctor internship in Kenya"
+      ],
+      "responses": [
+        "Yes, foreign-trained doctors can apply for internship placement in Kenya through KMPDC, subject to eligibility and verification."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "foreign_trained_kenyan_internship_validity",
+      "patterns": [
+        "As a foreign trained Kenyan is the internship in my country of training valid for registration purposes?",
+        "Is foreign internship valid for registration?",
+        "Can my foreign internship count for registration?"
+      ],
+      "responses": [
+        "Internships completed abroad are assessed individually. KMPDC determines their validity based on duration, scope, and accreditation of the training institution."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "internship_balloting_process",
+      "patterns": [
+        "How does the balloting process for internship centre happen?",
+        "How are internship centres assigned?",
+        "Explain internship balloting process"
+      ],
+      "responses": [
+        "Internship centres are allocated through an electronic balloting system managed by KMPDC to ensure fairness and transparency."
+      ],
+      "context": [""]
+    },
+    {
+      "tag": "internship_centre_change",
+      "patterns": [
+        "Can I change my internship centre?",
+        "How do I request a change of internship centre?",
+        "Is it possible to transfer internship hospital?"
+      ],
+      "responses": [
+        "Requests to change internship centres must be submitted formally to KMPDC, stating valid reasons. Approval is subject to availability and justification."
+      ],
+      "context": [""]
+    }
+  ]
 }

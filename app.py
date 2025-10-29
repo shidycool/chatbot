@@ -51,18 +51,34 @@ def predict_class(sentence, model):
     return return_list
 
 def getResponse(ints, intents_json):
+    # Handle case when model finds no intents
+    if len(ints) == 0:
+        return "Sorry, I didn’t quite understand that. Could you please rephrase or check your question?"
+
     tag = ints[0]['intent']
     list_of_intents = intents_json['intents']
+
     for i in list_of_intents:
-        if(i['tag']== tag):
+        if i['tag'] == tag:
             result = random.choice(i['responses'])
             break
+    else:
+        result = "I'm not sure how to answer that yet, but I'm learning!"
+
     return result
+
 
 def chatbot_response(msg):
     ints = predict_class(msg, model)
-    res = getResponse(ints, intents)
-    return res
+    if len(ints) == 0:
+        # no prediction above threshold
+        return "Sorry, I couldn’t find any information about that yet. Try asking in a different way."
+    return getResponse(ints, intents)
+
+
+
+
+
 
 
 from flask import Flask, render_template, request
