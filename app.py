@@ -13,6 +13,8 @@ intents = json.loads(open('data.json').read())
 words = pickle.load(open('texts.pkl','rb'))
 classes = pickle.load(open('labels.pkl','rb'))
 
+question_cache = {}
+
 def clean_up_sentence(sentence):
     # tokenize the pattern - split words into array
     sentence_words = nltk.word_tokenize(sentence)
@@ -69,11 +71,20 @@ def getResponse(ints, intents_json):
 
 
 def chatbot_response(msg):
+    # 1. check cache first
+    if msg.lower() in question_cache:
+        return question_cache[msg.lower()]   # instant reply
     ints = predict_class(msg, model)
     if len(ints) == 0:
         # no prediction above threshold
         return "Sorry, I couldn’t find any information about that yet. Try asking in a different way."
-    return getResponse(ints, intents)
+    else:
+      answer = getResponse(ints, intents)
+
+    # 3. store in cache for future use
+    question_cache[msg.lower()] = answer
+
+    return answer
 
 
 
@@ -81,19 +92,24 @@ def chatbot_response(msg):
 
 
 
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, jsonify
+from flask_cors import CORS
 
 app = Flask(__name__)
-app.static_folder = 'static'
+CORS(app)
+app.static_folder = 'static' 
 
-@app.route("/")
+@app.get("/")
 def home():
     return render_template("index.html")
 
-@app.route("/get")
+@app.post("/predict")
 def get_bot_response():
-    userText = request.args.get('msg')
-    return chatbot_response(userText)
+    userText = request.get_json().get('msg')
+    #TODOO: check if the userText is valid
+    response = chatbot_response(userText)
+    msg = {"answer": response}
+    return jsonify(msg)
 
 
 if __name__ == "__main__":

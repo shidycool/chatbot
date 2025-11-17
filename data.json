@@ -1,224 +1,315 @@
 {
   "intents": [
     {
-      "tag": "office_location",
+      "tag": "register_practitioner",
       "patterns": [
-        "Where are your offices?",
+        "How can I register as a medical practitioner?",
+        "How can I register as a dental practitioner?",
+        "Medical registration process",
+        "Practitioner registration steps",
+        "How do I become a licensed doctor in Kenya?"
+      ],
+      "responses": [
+        "To register as a medical or dental practitioner in Kenya, visit https://portal.kmpdc.go.ke and complete the online application form."
+      ]
+    },
+    {
+      "tag": "required_documents",
+      "patterns": [
+        "What documents are required for practitioner registration?",
+        "Which documents do I need for registration?",
+        "Required documents for doctor registration"
+      ],
+      "responses": [
+        "You will need your national ID or passport, academic certificates, internship completion certificate, and proof of payment."
+      ]
+    },
+    {
+      "tag": "license_processing_time",
+      "patterns": [
+        "How long does it take to get a practicing license?",
+        "License processing time",
+        "When will my license be ready?"
+      ],
+      "responses": [
+        "Processing usually takes 2–4 weeks after submitting all required documents and fees."
+      ]
+    },
+    {
+      "tag": "renew_license",
+      "patterns": [
+        "How can I renew my medical license?",
+        "License renewal process",
+        "Renew my dental license"
+      ],
+      "responses": [
+        "You can renew your license online via the KMPDC portal at https://portal.kmpdc.go.ke using your practitioner account."
+      ]
+    },
+    {
+      "tag": "registration_fees",
+      "patterns": [
+        "What are the fees for registration?",
+        "Registration and renewal fees",
+        "How much is the practitioner registration fee?"
+      ],
+      "responses": [
+        "Fees vary depending on practitioner category. Please refer to the official fee schedule on https://kmpdc.go.ke."
+      ]
+    },
+    {
+      "tag": "check_license_validity",
+      "patterns": [
+        "How can I check if my license is valid?",
+        "Verify my license",
+        "Is my license active?"
+      ],
+      "responses": [
+        "You can check your license validity at https://kmpdc.go.ke under the 'Registers' section."
+      ]
+    },
+    {
+      "tag": "temporary_registration",
+      "patterns": [
+        "How do I apply for temporary registration?",
+        "Temporary registration for foreign doctors",
+        "Foreign practitioner registration"
+      ],
+      "responses": [
+        "Foreign-trained doctors can apply for temporary registration via the KMPDC online portal with valid work permits and credentials."
+      ]
+    },
+    {
+      "tag": "register_health_facility",
+      "patterns": [
+        "How can I register a health facility?",
+        "Facility registration process",
+        "Register my clinic or hospital"
+      ],
+      "responses": [
+        "To register or renew a health facility license, apply online through <a href='https://portal.kmpdc.go.ke' target='_blank'>https://portal.kmpdc.go.ke</a> and upload the required documents."
+      ]
+    },
+    {
+      "tag": "facility_requirements",
+      "patterns": [
+        "What are the requirements for opening a new clinic?",
+        "Requirements for hospital registration",
+        "Documents needed for new facility"
+      ],
+      "responses": [
+        "You will need proof of premises ownership, facility layout plan, staff details, and compliance with KMPDC facility standards."
+      ]
+    },
+    {
+      "tag": "verify_facility",
+      "patterns": [
+        "How can I verify a hospital?",
+        "Is this clinic licensed?",
+        "Check if a hospital is approved by KMPDC"
+      ],
+      "responses": [
+        "You can verify licensed hospitals and clinics at <a href='https://kmpdc.go.ke' target='_blank'>https://kmpdc.go.ke</a> under 'Health Facilities'."
+      ]
+    },
+    {
+      "tag": "unlicensed_facility_consequences",
+      "patterns": [
+        "What happens if a facility operates without a license?",
+        "Penalty for unlicensed facility",
+        "Consequences of unlicensed clinic"
+      ],
+      "responses": [
+        "Operating without a valid license is illegal and may lead to closure and legal action by KMPDC."
+      ]
+    },
+    {
+      "tag": "inspection_frequency",
+      "patterns": [
+        "How often are inspections conducted?",
+        "When does KMPDC inspect facilities?",
+        "Inspection schedule for hospitals"
+      ],
+      "responses": [
+        "KMPDC conducts regular and random inspections to ensure compliance with healthcare standards."
+      ]
+    },
+    {
+      "tag": "approved_schools",
+      "patterns": [
+        "Which medical schools are accredited?",
+        "List of approved dental schools",
+        "Accredited training institutions"
+      ],
+      "responses": [
+        "You can find a list of accredited medical and dental schools on the KMPDC website under <a href='https://kmpdc.go.ke' target='_blank'>'Students'</a> or <a href='https://kmpdc.go.ke' target='_blank'>'Approved Institutions'</a>."
+
+      ]
+    },
+    {
+      "tag": "internship_placement",
+      "patterns": [
+        "How can I apply for internship placement?",
+        "Internship approval process",
+        "Apply for internship at KMPDC"
+      ],
+      "responses": [
+        "Apply for internship placement via the KMPDC online portal and ensure your documents are verified by your training institution."
+      ]
+    },
+    {
+      "tag": "foreign_doctor_requirements",
+      "patterns": [
+        "What are the requirements for foreign-trained doctors?",
+        "Requirements for foreign dentists",
+        "Foreign doctor documentation"
+      ],
+      "responses": [
+        "Foreign-trained practitioners must submit certified academic documents, proof of internship, and valid work authorization."
+      ]
+    },
+    {
+      "tag": "foreign_assessment",
+      "patterns": [
+        "How does KMPDC assess foreign qualifications?",
+        "Assessment for foreign doctors",
+        "Credential verification from outside Kenya"
+      ],
+      "responses": [
+        "KMPDC evaluates foreign qualifications based on curriculum equivalence and verification from the awarding institution."
+      ]
+    },
+    {
+      "tag": "report_complaint",
+      "patterns": [
+        "How can I report a complaint?",
+        "Report malpractice",
+        "File a complaint against a doctor"
+      ],
+      "responses": [
+        "You can report complaints through https://kmpdc.go.ke/complaints or email complaints@kmpdc.go.ke."
+      ]
+    },
+    {
+      "tag": "malpractice_investigation",
+      "patterns": [
+        "What is the process for investigating medical malpractice?",
+        "How are complaints investigated?",
+        "Malpractice investigation steps"
+      ],
+      "responses": [
+        "KMPDC investigates complaints through a formal inquiry process, which may involve hearings and expert review."
+      ]
+    },
+    {
+      "tag": "anonymous_complaint",
+      "patterns": [
+        "Can I remain anonymous when filing a complaint?",
+        "Anonymous complaint policy",
+        "Report without giving my name"
+      ],
+      "responses": [
+        "You may submit a complaint anonymously, but providing contact details helps KMPDC follow up effectively."
+      ]
+    },
+    {
+      "tag": "complaint_timeline",
+      "patterns": [
+        "How long does it take for a complaint to be resolved?",
+        "Complaint resolution timeline",
+        "When will I get feedback on my complaint?"
+      ],
+      "responses": [
+        "Resolution time depends on case complexity but usually takes a few weeks to months after investigation begins."
+      ]
+    },
+    {
+      "tag": "access_portal",
+      "patterns": [
+        "How do I access the KMPDC online portal?",
+        "Where can I log in?",
+        "Access KMPDC account"
+      ],
+      "responses": [
+        "Access the KMPDC online portal at https://portal.kmpdc.go.ke using your email and password."
+      ]
+    },
+    {
+      "tag": "online_payment",
+      "patterns": [
+        "How can I make payments online?",
+        "Pay for license renewal",
+        "Online payment options"
+      ],
+      "responses": [
+        "Log into your portal account at https://portal.kmpdc.go.ke and follow payment instructions using M-Pesa or bank transfer."
+      ]
+    },
+    {
+      "tag": "download_license",
+      "patterns": [
+        "Can I download my license certificate?",
+        "Download practitioner license",
+        "Get my license from portal"
+      ],
+      "responses": [
+        "Yes, once approved, you can download your license certificate directly from your KMPDC portal account."
+      ]
+    },
+    {
+      "tag": "office_info",
+      "patterns": [
+        "What are your office hours?",
         "Where is KMPDC located?",
-        "What is your office address?",
-        "Where can I find KMPDC?"
+        "Office address"
       ],
       "responses": [
-        "KMPDC offices are located along Woodlands Road, off Lenana Road, Nairobi, Kenya.",
-        "You can visit us at KMPDC headquarters, Woodlands Road, off Lenana Road, Nairobi."
-      ],
-      "context": [""]
+        "KMPDC is located on Woodlands Road, Hurlingham, Nairobi. Office hours: Monday–Friday, 8:00 AM–5:00 PM."
+      ]
     },
     {
-      "tag": "registration_application_email",
+      "tag": "contact_support",
       "patterns": [
-        "Can I send my registration application via email?",
-        "Can I apply for registration online?",
-        "Is registration submission done by email?",
-        "Can I submit my registration documents through email?"
+        "How can I contact customer care?",
+        "Customer service contact",
+        "Phone number for KMPDC"
       ],
       "responses": [
-        "Registration applications should be submitted through the KMPDC Online Services Portal. Email submissions are not accepted.",
-        "Please use the KMPDC online portal for all registration applications."
-      ],
-      "context": [""]
+        "You can reach KMPDC via email info@kmpdc.go.ke or call +254-20-2726300."
+      ]
     },
     {
-      "tag": "certificate_collection",
+      "tag": "regional_operations",
       "patterns": [
-        "Can someone pick a registration certificate on my behalf?",
-        "Can another person collect my certificate?",
-        "Is it possible for someone else to pick my registration certificate?"
+        "Does KMPDC operate in counties?",
+        "Is KMPDC only in Nairobi?",
+        "KMPDC offices in other regions"
       ],
       "responses": [
-        "Yes, a representative can collect your certificate on your behalf if they present a signed authorization letter and valid identification."
-      ],
-      "context": [""]
+        "KMPDC operates nationally with the main office in Nairobi. County-level operations are coordinated through regional inspections."
+      ]
     },
     {
-      "tag": "registration_duration",
+      "tag": "confirm_doctor_registration",
       "patterns": [
-        "How long is the registration process?",
-        "How long does registration take?",
-        "When will my registration be completed?"
+        "How can I confirm if a doctor is registered?",
+        "Check if doctor is licensed",
+        "Verify practitioner registration"
       ],
       "responses": [
-        "The registration process typically takes 2–4 weeks after submission of all required documents and successful verification."
-      ],
-      "context": [""]
+        "You can confirm a doctor’s registration on https://kmpdc.go.ke under 'Registers' > 'Practitioners'."
+      ]
     },
     {
-      "tag": "licensing_duration",
+      "tag": "find_health_facilities",
       "patterns": [
-        "How long does licensing processing take after registration?",
-        "When can I get my license after registration?",
-        "How long does it take to process a license?"
+        "How can I find licensed health facilities near me?",
+        "Search hospitals near me",
+        "Find registered clinics in my area"
       ],
       "responses": [
-        "Licensing usually takes 2–3 weeks after registration approval and payment confirmation."
-      ],
-      "context": [""]
-    },
-    {
-      "tag": "foreign_doctor_practice",
-      "patterns": [
-        "Can a foreign doctor practice in Kenya for a short time?",
-        "Can foreign doctors work in Kenya temporarily?",
-        "Are short-term foreign practitioners allowed?"
-      ],
-      "responses": [
-        "Yes, foreign doctors may apply for a temporary license to practice in Kenya for a specific duration or assignment, subject to KMPDC approval."
-      ],
-      "context": [""]
-    },
-    {
-      "tag": "case_status",
-      "patterns": [
-        "What is the status of my cases?",
-        "Can you update me on my case?",
-        "How can I check the progress of my complaint or case?"
-      ],
-      "responses": [
-        "You can check the status of your case through the KMPDC online portal or by contacting the Legal Department for updates."
-      ],
-      "context": [""]
-    },
-    {
-      "tag": "online_account_help",
-      "patterns": [
-        "Assist me to access my online account?",
-        "I can’t log in to my KMPDC account",
-        "Help me with my KMPDC account login"
-      ],
-      "responses": [
-        "Please use the ‘Forgot Password’ option on the KMPDC Online Services Portal. If the issue persists, contact ICT support via support@kmpdc.go.ke."
-      ],
-      "context": [""]
-    },
-    {
-      "tag": "email_update",
-      "patterns": [
-        "I need to change my online email?",
-        "How can I update my KMPDC portal email?",
-        "Can I change my registered email address?"
-      ],
-      "responses": [
-        "To change your registered email, send a formal request to ICT support at support@kmpdc.go.ke, including your full name and registration details."
-      ],
-      "context": [""]
-    },
-    {
-      "tag": "cpd_points_issue",
-      "patterns": [
-        "My CPD points are not reflecting?",
-        "Why are my CPD points missing?",
-        "CPD points not updated on my profile?"
-      ],
-      "responses": [
-        "CPD points may take a few days to update after provider submission. If not reflected, please confirm with your CPD provider or email cpd@kmpdc.go.ke."
-      ],
-      "context": [""]
-    },
-    {
-      "tag": "insufficient_cpd_points",
-      "patterns": [
-        "I do not have enough points to renew my license?",
-        "Can I renew my license without full CPD points?",
-        "What happens if I lack required CPD points?"
-      ],
-      "responses": [
-        "You must attain the required CPD points before renewal. Please complete additional accredited CPD activities to meet the renewal criteria."
-      ],
-      "context": [""]
-    },
-    {
-      "tag": "invoice_penalty_removal",
-      "patterns": [
-        "I have a penalty on my invoice, can this be removed?",
-        "Can my penalty charge be waived?",
-        "Is it possible to remove my late payment penalty?"
-      ],
-      "responses": [
-        "Penalty removal is subject to KMPDC management approval. Please submit a written request explaining the reason for delay."
-      ],
-      "context": [""]
-    },
-    {
-      "tag": "license_type_change",
-      "patterns": [
-        "How can I change my license from non-clinical to clinical?",
-        "Can I switch from non-clinical to clinical practice?",
-        "Change my license category to clinical"
-      ],
-      "responses": [
-        "You can request a license type change by submitting supporting documentation through the KMPDC portal and notifying the Licensing Department."
-      ],
-      "context": [""]
-    },
-    {
-      "tag": "license_credentials_update",
-      "patterns": [
-        "How can I update the credentials on my licence?",
-        "I need to add qualifications to my license",
-        "Update my professional details on license"
-      ],
-      "responses": [
-        "To update credentials, submit your new academic or professional documents through the KMPDC portal for verification and license update."
-      ],
-      "context": [""]
-    },
-    {
-      "tag": "foreign_internship_kenya",
-      "patterns": [
-        "Can I do my internship in Kenya as a foreigner?",
-        "Are foreigners allowed to do internship in Kenya?",
-        "Foreign trained doctor internship in Kenya"
-      ],
-      "responses": [
-        "Yes, foreign-trained doctors can apply for internship placement in Kenya through KMPDC, subject to eligibility and verification."
-      ],
-      "context": [""]
-    },
-    {
-      "tag": "foreign_trained_kenyan_internship_validity",
-      "patterns": [
-        "As a foreign trained Kenyan is the internship in my country of training valid for registration purposes?",
-        "Is foreign internship valid for registration?",
-        "Can my foreign internship count for registration?"
-      ],
-      "responses": [
-        "Internships completed abroad are assessed individually. KMPDC determines their validity based on duration, scope, and accreditation of the training institution."
-      ],
-      "context": [""]
-    },
-    {
-      "tag": "internship_balloting_process",
-      "patterns": [
-        "How does the balloting process for internship centre happen?",
-        "How are internship centres assigned?",
-        "Explain internship balloting process"
-      ],
-      "responses": [
-        "Internship centres are allocated through an electronic balloting system managed by KMPDC to ensure fairness and transparency."
-      ],
-      "context": [""]
-    },
-    {
-      "tag": "internship_centre_change",
-      "patterns": [
-        "Can I change my internship centre?",
-        "How do I request a change of internship centre?",
-        "Is it possible to transfer internship hospital?"
-      ],
-      "responses": [
-        "Requests to change internship centres must be submitted formally to KMPDC, stating valid reasons. Approval is subject to availability and justification."
-      ],
-      "context": [""]
+        "Search for licensed health facilities by county or town at https://kmpdc.go.ke under 'Health Facilities'."
+      ]
     }
   ]
 }
